@@ -1,14 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import Link from "next/link";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-  AnimatePresence,
-} from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -24,17 +17,14 @@ import {
   Linkedin,
   Mail,
   Phone,
-  Menu,
   Award,
   FileText,
-  X,
   ExternalLink,
   GraduationCap,
-  Moon,
-  Sun,
 } from "lucide-react";
 import portfolioData from "@/utils/data.json";
 import { useTheme } from "next-themes";
+import Navbar from "@/components/NavBar";
 
 interface Node {
   x: number;
@@ -169,31 +159,10 @@ const AnimatedSection = ({
   );
 };
 
-const NavLink = ({
-  href,
-  children,
-  onClick,
-}: {
-  href: string;
-  children: React.ReactNode;
-  onClick?: () => void;
-}) => (
-  <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-    <Link
-      href={href}
-      className="hover:text-primary transition-colors"
-      onClick={onClick}
-    >
-      {children}
-    </Link>
-  </motion.div>
-);
-
 export default function Portfolio() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -209,138 +178,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       {mounted && <BlockchainNetworkBackground />}
-      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm">
-        <motion.div
-          className="top-0 left-0 right-0 h-1 bg-primary origin-left"
-          style={{ scaleX }}
-        />
-        <div className="container mx-auto py-4">
-          <div className="flex items-center justify-between">
-            <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-2xl font-bold"
-            >
-              {portfolioData.name}
-            </motion.h1>
-            <nav className="hidden md:flex gap-4 items-center">
-              <NavLink href="#about">About</NavLink>
-              <NavLink href="#experience">Experience</NavLink>
-              <NavLink href="#education">Education</NavLink>
-              <NavLink href="#skills">Skills</NavLink>
-              <NavLink href="#projects">Projects</NavLink>
-              <NavLink href="#achievements">Achievements</NavLink>
-              <NavLink href="#certifications">Certifications</NavLink>
-              {mounted && (
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  aria-label="Toggle theme"
-                >
-                  {theme === "dark" ? (
-                    <Sun className="h-5 w-5" />
-                  ) : (
-                    <Moon className="h-5 w-5" />
-                  )}
-                </Button>
-              )}
-            </nav>
-
-            <div className="md:hidden flex items-center gap-2">
-              {mounted && (
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  aria-label="Toggle theme"
-                >
-                  {theme === "dark" ? (
-                    <Sun className="h-5 w-5" />
-                  ) : (
-                    <Moon className="h-5 w-5" />
-                  )}
-                </Button>
-              )}
-              <Button
-                variant="ghost"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label="Toggle menu"
-              >
-                <Menu className="h-6 w-6" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", damping: 20, stiffness: 100 }}
-            className="fixed inset-y-0 right-0 z-50 w-64 bg-background shadow-lg md:hidden"
-          >
-            <div className="p-4">
-              <Button
-                variant="ghost"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mb-4"
-                aria-label="Close menu"
-              >
-                <X className="h-6 w-6" />
-              </Button>
-              <nav className="flex flex-col gap-4">
-                <NavLink
-                  href="#about"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  About
-                </NavLink>
-                <NavLink
-                  href="#experience"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Experience
-                </NavLink>
-                <NavLink
-                  href="#education"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Education
-                </NavLink>
-                <NavLink
-                  href="#skills"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Skills
-                </NavLink>
-                <NavLink
-                  href="#projects"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Projects
-                </NavLink>
-                <NavLink
-                  href="#achievements"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Achievements
-                </NavLink>
-                <NavLink
-                  href="#certifications"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Certifications
-                </NavLink>
-              </nav>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <Navbar scaleX={scaleX} />
 
       <main className="container mx-auto py-6 px-4">
         <AnimatedSection id="about">
