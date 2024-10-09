@@ -1,0 +1,211 @@
+{
+  "name": "Dasarath G",
+  "about": "Web3 Developer with experience in building decentralized applications and IoT solutions. Passionate about blockchain technology and its applications in healthcare and governance.",
+  "contact": {
+    "email": "dasarathg68@gmail.com",
+    "phone": "+91-9080575372",
+    "github": "https://github.com/dasarathg68"
+  },
+  "experience": [
+    {
+      "title": "Web3 Developer",
+      "company": "Globe & Citizen",
+      "location": "Canada (Remote)",
+      "period": "March 2024 - Present",
+      "responsibilities": [
+        "Building the CNC Portal for crypto native corporations to financially recognize micro contributions and create tools that promote effective governance.",
+        "Developing UI/UX using Vue.js, Tailwind, and DaisyUI.",
+        "Backend development using Node.js, Prisma, and PostgreSQL.",
+        "Writing tests using Vitest and Cypress.",
+        "Maintaining the CI/CD pipeline.",
+        "Working on smart contracts using Solidity.",
+        "Managing a decentralized e-voting system side project."
+      ]
+    },
+    {
+      "title": "Lead Engineer",
+      "company": "bEarly TechnoVations Pvt. Ltd.",
+      "location": "Chennai",
+      "period": "April 2023 - January 2024",
+      "responsibilities": [
+        "Developed paceB, a biomedical device for early-stage Parkinson's disease diagnosis.",
+        "Improved real-time data streaming efficiency by 13 times with a payload size of 250 bytes.",
+        "Built a patient and health record management system with a payment interface and IoT dashboard using Node.js, Next.js, Razorpay, MySQL, and EMQX broker.",
+        "Conducted clinical studies and validated the prototype to a market-ready solution.",
+        "Co-authored a technical white paper, filed a patent, and led the product launch."
+      ]
+    },
+    {
+      "title": "Research and Development Intern",
+      "company": "Gerontechnology Research Center",
+      "location": "Yuan Ze University, Taiwan (On-site)",
+      "period": "February 2023 - June 2023",
+      "responsibilities": [
+        "Built an IoT backend for user and device management using the Gin-Gonic framework in Go, MongoDB, and MariaDB.",
+        "Developed a dashboard for activity detection using smart meter data API, rolled out to 250+ customers.",
+        "Contributed to debugging algorithms and writing reports."
+      ]
+    },
+    {
+      "title": "Embedded Software Developer Intern",
+      "company": "Analog Devices India",
+      "location": "Bengaluru (Remote)",
+      "period": "April 2022 - June 2022",
+      "responsibilities": [
+        "Completed a project on 'Source Meter Control Automation & Complex Device Drivers (CDD)'.",
+        "Gained insights on BMS, embedded software, and isoSPI."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "SASTRA Deemed University",
+      "location": "Thanjavur, India",
+      "degree": "Bachelor of Technology (B.Tech.) in Electronics & Communication Engineering",
+      "period": "July 2019 - July 2023",
+      "grade": "CGPA - 8.3575"
+    },
+    {
+      "institution": "The Hindu Senior Secondary School",
+      "location": "Chennai, India",
+      "degree": "Higher Secondary",
+      "period": "Graduated March 2019",
+      "grade": "Percentage - 92.00"
+    }
+  ],
+  "skills": [
+    "React.js",
+    "Next.js",
+    "Vue.js",
+    "Node.js",
+    "Python",
+    "C++",
+    "Go",
+    "Solidity",
+    "Tailwind CSS",
+    "DaisyUI",
+    "Vitest",
+    "AWS",
+    "Firebase",
+    "MongoDB",
+    "MySQL",
+    "PostgreSQL"
+  ],
+  "projects": [
+    {
+      "title": "GovernanceX",
+      "description": "A Portal for On-Chain Team Management and Contract Deployment",
+      "details": "A decentralized platform for managing teams and deploying smart contracts on-chain.",
+      "github": "",
+      "live": "",
+      "docs": ""
+    },
+    {
+      "title": "ClubMinter",
+      "description": "DApp for exclusive club members to mint NFTs",
+      "details": "A decentralized application allowing club members to mint exclusive NFTs.",
+      "github": "",
+      "live": "",
+      "docs": ""
+    },
+    {
+      "title": "MedPortal",
+      "description": "Patient Management System",
+      "details": "A system with PDF uploads via Amazon S3 for managing patient records.",
+      "github": "",
+      "live": "",
+      "docs": ""
+    },
+    {
+      "title": "IoT based Energy Monitoring System",
+      "description": "Energy monitoring solution using MERN stack and EMQX broker",
+      "details": "Developed IoT nodes to monitor energy consumption in real-time.",
+      "github": "",
+      "live": "",
+      "docs": ""
+    },
+    {
+      "title": "IoT Nodes for Quality Monitoring in Water Bodies",
+      "description": "Built IoT nodes for tracking water quality parameters.",
+      "github": "",
+      "live": "",
+      "docs": ""
+    },
+    {
+      "title": "Temperature Monitoring System",
+      "description": "Monitored cold storage temperature using IoT.",
+      "details": "Developed an IoT system to track and control temperatures for cold storage environments.",
+      "github": "",
+      "live": "",
+      "docs": ""
+    }
+  ],
+  "activities_and_achievements": [
+    "Filed a patent: 'A Device for Detection and Prognosis of Pathological Gait'",
+    "Finalist in Evathon 2021 (Hackathon conducted by the University of Limerick, Ireland)",
+    "Dean’s Merit List in the academic year 2019-2020",
+    "Recipient of Taiwan Experience Education Program scholarship and Desh-Videsh scholarship from SASTRA University"
+  ],
+  "certifications": [
+    {
+      "name": "Complete Vue Developer Bootcamp",
+      "issuer": "Udemy",
+      "date": "July 2024"
+    },
+    {
+      "name": "0-1 MERN Full Stack Web Development Course",
+      "issuer": "100xDevs",
+      "date": "June 2024"
+    },
+    {
+      "name": "IoT Application Development with Matter and ESP32",
+      "issuer": "Udemy",
+      "date": "March 2024"
+    },
+    {
+      "name": "OpenAPI: Beginner to Guru",
+      "issuer": "Udemy",
+      "date": "March 2024"
+    },
+    {
+      "name": "ESP32 Bootcamp: A Step by Step Practical Approach",
+      "issuer": "Udemy",
+      "date": "March 2022"
+    },
+    {
+      "name": "C Based VLSI Design",
+      "issuer": "NPTEL",
+      "date": "November 2021"
+    },
+    {
+      "name": "Introduction to Embedded Systems",
+      "issuer": "NPTEL",
+      "date": "December 2020"
+    },
+    {
+      "name": "Introduction to HTML5",
+      "issuer": "Coursera",
+      "date": "August 2020"
+    },
+    {
+      "name": "The Bits and Bytes of Computer Networking",
+      "issuer": "Coursera",
+      "date": "July 2020"
+    },
+    {
+      "name": "Crash Course on Python",
+      "issuer": "Coursera",
+      "date": "June 2020"
+    },
+    {
+      "name": "Technical Support Fundamentals",
+      "issuer": "Coursera",
+      "date": "June 2020"
+    },
+    {
+      "name": "VR and 360 Video Production",
+      "issuer": "Coursera",
+      "date": "June 2020"
+    }
+  ]
+}
