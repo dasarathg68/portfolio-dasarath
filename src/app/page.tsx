@@ -192,7 +192,12 @@ const NavLink = ({
 export default function Portfolio() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -202,7 +207,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
-      <BlockchainNetworkBackground />
+      {mounted && <BlockchainNetworkBackground />}
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm">
         <motion.div
           className="top-0 left-0 right-0 h-1 bg-primary origin-left"
@@ -226,33 +231,37 @@ export default function Portfolio() {
               <NavLink href="#projects">Projects</NavLink>
               <NavLink href="#achievements">Achievements</NavLink>
               <NavLink href="#certifications">Certifications</NavLink>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? (
-                  <Sun className="h-5 w-5" />
-                ) : (
-                  <Moon className="h-5 w-5" />
-                )}
-              </Button>
+              {mounted && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  aria-label="Toggle theme"
+                >
+                  {theme === "dark" ? (
+                    <Sun className="h-5 w-5" />
+                  ) : (
+                    <Moon className="h-5 w-5" />
+                  )}
+                </Button>
+              )}
             </nav>
 
             <div className="md:hidden flex items-center gap-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? (
-                  <Sun className="h-5 w-5" />
-                ) : (
-                  <Moon className="h-5 w-5" />
-                )}
-              </Button>
+              {mounted && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  aria-label="Toggle theme"
+                >
+                  {theme === "dark" ? (
+                    <Sun className="h-5 w-5" />
+                  ) : (
+                    <Moon className="h-5 w-5" />
+                  )}
+                </Button>
+              )}
               <Button
                 variant="ghost"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
