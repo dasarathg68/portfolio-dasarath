@@ -197,6 +197,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     setMounted(true);
+    setTheme("dark");
   }, []);
 
   const scaleX = useSpring(scrollYProgress, {
