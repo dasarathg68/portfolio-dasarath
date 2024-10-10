@@ -462,28 +462,50 @@ export default function Portfolio() {
         <div className="container mx-auto text-center px-4">
           <div className="flex justify-center space-x-4 mb-4">
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <Button variant="ghost" size="icon">
+              <a
+                href={portfolioData.contact.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
+                aria-label="GitHub Profile"
+              >
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
-              </Button>
+              </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <Button variant="ghost" size="icon">
+              <a
+                href={portfolioData.contact.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
+                aria-label="LinkedIn Profile"
+              >
                 <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Button>
+              </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <Button variant="ghost" size="icon">
+              <a
+                href={"mailto:" + portfolioData.contact.email}
+                target="_blank"
+                className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
+                aria-label="Email"
+              >
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
-              </Button>
+              </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <Button variant="ghost" size="icon">
+              <a
+                href={"tel:" + portfolioData.contact.phone}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
+                aria-label="Phone"
+              >
                 <Phone className="h-5 w-5" />
                 <span className="sr-only">Phone</span>
-              </Button>
+              </a>
             </motion.div>
           </div>
           <p>&copy; 2024 {portfolioData.name}. All rights reserved.</p>
