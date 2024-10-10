@@ -1,10 +1,11 @@
 {
   "name": "Dasarath G",
-  "about": "Web3 Developer with experience in building decentralized applications and IoT solutions. Passionate about blockchain technology and its applications in healthcare and governance.",
+  "about": "Electronics engineering graduate with a passion for decoding complex systems across multiple domains. With over three years of diverse experience in startups, research labs, and industry, I've spearheaded projects in healthcare, environment, governance, and finance. My expertise spans Full Stack Development, Web3, IoT, Embedded Systems, and AI, allowing me to craft innovative solutions that bridge technological gaps. As a successful freelancer and team leader, I've completed over 10 projects with a 100% satisfaction rate, demonstrating my ability to deliver results in software development, embedded electronics, and robotics. Currently contributing to the future of decentralized collaboration as a Web3 Developer at Globe & Citizen, where I'm helping build the CNC Portal to revolutionize open-source contribution recognition and governance.",
   "contact": {
     "email": "dasarathg68@gmail.com",
     "phone": "+91-9080575372",
-    "github": "https://github.com/dasarathg68"
+    "github": "https://github.com/dasarathg68",
+    "linkedin": "https://www.linkedin.com/in/dasarathg68"
   },
   "experience": [
     {
@@ -13,26 +14,34 @@
       "location": "Canada (Remote)",
       "period": "March 2024 - Present",
       "responsibilities": [
-        "Building the CNC Portal for crypto native corporations to financially recognize micro contributions and create tools that promote effective governance.",
-        "Developing UI/UX using Vue.js, Tailwind, and DaisyUI.",
-        "Backend development using Node.js, Prisma, and PostgreSQL.",
-        "Writing tests using Vitest and Cypress.",
-        "Maintaining the CI/CD pipeline.",
-        "Working on smart contracts using Solidity.",
-        "Managing a decentralized e-voting system side project."
+        "Building the CNC Portal, an innovative platform for crypto-native corporations, focusing on micro-contribution recognition and effective governance tools.",
+        "Architecting and implementing full-stack solutions using Vue.js, Tailwind, DaisyUI for frontend, and Node.js with Prisma and PostgreSQL for backend, ensuring seamless user experiences and robust data management.",
+        "Driving quality assurance through comprehensive testing with Vitest and Cypress, while maintaining CI/CD pipelines for streamlined development processes.",
+        "Developing and optimizing smart contracts using Solidity, and managing a parallel decentralized e-voting system project, showcasing versatility in blockchain applications."
+      ]
+    },
+    {
+      "title": "Core Contributor",
+      "company": "CTRLDefi",
+      "location": "Remote",
+      "period": "August 2024 - Present",
+
+      "responsibilities": [
+        "Developing the 'Instant Send App', a self-custodial smart-contract wallet, for seamless stablecoin transfers between Telegram contacts within the scope of the Telegram Messenger",
+
+        "Research and apply Account Abstraction solutions compatible with Telegram MiniApps and Optimize user experience for crypto newcomers, focusing on simplicity and ease of use"
       ]
     },
     {
       "title": "Lead Engineer",
       "company": "bEarly TechnoVations Pvt. Ltd.",
-      "location": "Chennai",
+      "location": "Chennai (Hybrid)",
       "period": "April 2023 - January 2024",
       "responsibilities": [
-        "Developed paceB, a biomedical device for early-stage Parkinson's disease diagnosis.",
-        "Improved real-time data streaming efficiency by 13 times with a payload size of 250 bytes.",
-        "Built a patient and health record management system with a payment interface and IoT dashboard using Node.js, Next.js, Razorpay, MySQL, and EMQX broker.",
-        "Conducted clinical studies and validated the prototype to a market-ready solution.",
-        "Co-authored a technical white paper, filed a patent, and led the product launch."
+        "Led the end-to-end development of paceB, a biomedical device for early-stage Parkinson's disease diagnosis, from concept to market-ready solution.",
+        "Engineered a high-performance IoT ecosystem using ESP32, AWS, and EMQX broker, achieving a 13-fold improvement in real-time data streaming efficiency with a 250-byte payload.",
+        "Designed and implemented a comprehensive healthcare management system integrating patient records, payment processing, and IoT device control using Node.js, Next.js, Razorpay, MySQL, and EMQX broker.",
+        "Orchestrated clinical trials, co-authored a technical white paper, filed a patent, and successfully launched the product, marking a significant milestone for the company."
       ]
     },
     {
@@ -41,19 +50,20 @@
       "location": "Yuan Ze University, Taiwan (On-site)",
       "period": "February 2023 - June 2023",
       "responsibilities": [
-        "Built an IoT backend for user and device management using the Gin-Gonic framework in Go, MongoDB, and MariaDB.",
-        "Developed a dashboard for activity detection using smart meter data API, rolled out to 250+ customers.",
-        "Contributed to debugging algorithms and writing reports."
+        "Collaborated with Dr. Yeh-Liang Hsu to develop innovative products for assessing the physical and cognitive well-being of aging adults.",
+        "Engineered a scalable IoT backend using Go's Gin-Gonic framework, MongoDB, and MariaDB, facilitating efficient user and device management.",
+        "Developed and deployed an activity detection dashboard using smart meter data API, successfully rolled out to over 250 customers.",
+        "Contributed to feature development in Flutter and conducted thorough debugging and report writing, culminating in a well-received undergraduate thesis."
       ]
     },
     {
       "title": "Embedded Software Developer Intern",
       "company": "Analog Devices India",
       "location": "Bengaluru (Remote)",
-      "period": "April 2022 - June 2022",
+      "period": "April 2022 – June 2022",
       "responsibilities": [
-        "Completed a project on 'Source Meter Control Automation & Complex Device Drivers (CDD)'.",
-        "Gained insights on BMS, embedded software, and isoSPI."
+        "Completed a comprehensive project on 'Source Meter Control Automation & Complex Device Drivers (CDD)', gaining deep insights into Battery Management Systems (BMS), embedded software development, and isoSPI technology.",
+        "Contributed to the development of embedded systems, enhancing skills in low-level programming and hardware integration."
       ]
     }
   ],
@@ -143,7 +153,7 @@
   "activities_and_achievements": [
     "Filed a patent: 'A Device for Detection and Prognosis of Pathological Gait'",
     "Finalist in Evathon 2021 (Hackathon conducted by the University of Limerick, Ireland)",
-    "Dean’s Merit List in the academic year 2019-2020",
+    "Dean's Merit List in the academic year 2019-2020",
     "Recipient of Taiwan Experience Education Program scholarship and Desh-Videsh scholarship from SASTRA University"
   ],
   "certifications": [

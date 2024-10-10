@@ -2,9 +2,12 @@
 
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import dasarathg68Image from "@/app/dachu.jpg";
+import Image from "next/image";
+
 import {
   Card,
   CardContent,
@@ -184,15 +187,18 @@ export default function Portfolio() {
         <AnimatedSection id="about">
           <h2 className="text-2xl font-semibold mb-4">About Me</h2>
           <Card>
-            <CardContent className="flex flex-col md:flex-row items-center gap-6 pt-6">
+            <CardContent className="flex flex-col items-center gap-6 pt-6">
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 360 }}
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
               >
                 <Avatar className="h-24 w-24">
-                  <AvatarImage
-                    src="/placeholder.svg?height=96&width=96"
+                  <Image
+                    src={dasarathg68Image}
                     alt={portfolioData.name}
+                    width={96}
+                    height={96}
+                    className="rounded-full object-cover"
                   />
                   <AvatarFallback>JD</AvatarFallback>
                 </Avatar>
@@ -205,37 +211,59 @@ export default function Portfolio() {
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Button variant="ghost" size="icon">
+                  <a
+                    href={portfolioData.contact.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
+                    aria-label="GitHub Profile"
+                  >
                     <Github className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
-                  </Button>
+                  </a>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Button variant="ghost" size="icon">
+                  <a
+                    href={portfolioData.contact.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
+                    aria-label="LinkedIn Profile"
+                  >
                     <Linkedin className="h-5 w-5" />
-                    <span className="sr-only">LinkedIn</span>
-                  </Button>
+                  </a>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Button variant="ghost" size="icon">
+                  <a
+                    href={"mailto:" + portfolioData.contact.email}
+                    target="_blank"
+                    className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
+                    aria-label="Email"
+                  >
                     <Mail className="h-5 w-5" />
                     <span className="sr-only">Email</span>
-                  </Button>
+                  </a>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Button variant="ghost" size="icon">
+                  <a
+                    href={"tel:" + portfolioData.contact.phone}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
+                    aria-label="Phone"
+                  >
                     <Phone className="h-5 w-5" />
                     <span className="sr-only">Phone</span>
-                  </Button>
+                  </a>
                 </motion.div>
               </div>
             </CardContent>
