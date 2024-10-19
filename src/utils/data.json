@@ -106,7 +106,7 @@
       "title": "GovernanceX",
       "description": "A Portal for On-Chain Team Management and Contract Deployment",
       "details": "A decentralized platform for managing teams and deploying smart contracts on-chain.",
-      "github": "",
+      "github": "https://github.com/dasarathg68/GovernanceX",
       "live": "",
       "docs": ""
     },
@@ -114,15 +114,15 @@
       "title": "ClubMinter",
       "description": "DApp for exclusive club members to mint NFTs",
       "details": "A decentralized application allowing club members to mint exclusive NFTs.",
-      "github": "",
-      "live": "",
+      "github": "https://github.com/dasarathg68/mint-nft-dapp",
+      "live": "https://mint-nft-dapp-rho.vercel.app/",
       "docs": ""
     },
     {
       "title": "MedPortal",
       "description": "Patient Management System",
       "details": "A system with PDF uploads via Amazon S3 for managing patient records.",
-      "github": "",
+      "github": "https://github.com/dasarathg68/MedPortal",
       "live": "",
       "docs": ""
     },
@@ -130,7 +130,7 @@
       "title": "IoT based Energy Monitoring System",
       "description": "Energy monitoring solution using MERN stack and EMQX broker",
       "details": "Developed IoT nodes to monitor energy consumption in real-time.",
-      "github": "",
+      "github": "https://github.com/dasarathg68/energy-monitoring",
       "live": "",
       "docs": ""
     },

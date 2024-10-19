@@ -2,12 +2,8 @@
 
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import dasarathg68Image from "@/app/dachu.jpg";
 import Image from "next/image";
-
+import { useTheme } from "next-themes";
 import {
   Card,
   CardContent,
@@ -26,8 +22,11 @@ import {
   GraduationCap,
 } from "lucide-react";
 import portfolioData from "@/utils/data.json";
-import { useTheme } from "next-themes";
+import dasarathg68Image from "@/app/dachu.jpg";
 import Navbar from "@/components/NavBar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 interface Node {
   x: number;
@@ -129,7 +128,6 @@ const BlockchainNetworkBackground = () => {
     <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none" />
   );
 };
-
 const AnimatedSection = ({
   children,
   id,
@@ -162,6 +160,29 @@ const AnimatedSection = ({
   );
 };
 
+const SocialLink = ({
+  href,
+  icon: Icon,
+  label,
+}: {
+  href: string;
+  icon: React.ElementType;
+  label: string;
+}) => (
+  <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline"
+      aria-label={label}
+    >
+      <Icon className="h-5 w-5" />
+      <span className="sr-only">{label}</span>
+    </a>
+  </motion.div>
+);
+
 export default function Portfolio() {
   const { scrollYProgress } = useScroll();
   const [mounted, setMounted] = useState(false);
@@ -170,7 +191,7 @@ export default function Portfolio() {
   useEffect(() => {
     setMounted(true);
     setTheme("dark");
-  }, []);
+  }, [setTheme]);
 
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -203,68 +224,28 @@ export default function Portfolio() {
                   <AvatarFallback>JD</AvatarFallback>
                 </Avatar>
               </motion.div>
-              <div>
-                <p className="text-lg">{portfolioData.about}</p>
-              </div>
+              <p className="text-lg">{portfolioData.about}</p>
               <div className="flex justify-center space-x-4 mb-4">
-                <motion.div
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <a
-                    href={portfolioData.contact.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
-                    aria-label="GitHub Profile"
-                  >
-                    <Github className="h-5 w-5" />
-                    <span className="sr-only">GitHub</span>
-                  </a>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <a
-                    href={portfolioData.contact.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
-                    aria-label="LinkedIn Profile"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <a
-                    href={"mailto:" + portfolioData.contact.email}
-                    target="_blank"
-                    className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
-                    aria-label="Email"
-                  >
-                    <Mail className="h-5 w-5" />
-                    <span className="sr-only">Email</span>
-                  </a>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <a
-                    href={"tel:" + portfolioData.contact.phone}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
-                    aria-label="Phone"
-                  >
-                    <Phone className="h-5 w-5" />
-                    <span className="sr-only">Phone</span>
-                  </a>
-                </motion.div>
+                <SocialLink
+                  href={portfolioData.contact.github}
+                  icon={Github}
+                  label="GitHub Profile"
+                />
+                <SocialLink
+                  href={portfolioData.contact.linkedin}
+                  icon={Linkedin}
+                  label="LinkedIn Profile"
+                />
+                <SocialLink
+                  href={`mailto:${portfolioData.contact.email}`}
+                  icon={Mail}
+                  label="Email"
+                />
+                <SocialLink
+                  href={`tel:${portfolioData.contact.phone}`}
+                  icon={Phone}
+                  label="Phone"
+                />
               </div>
             </CardContent>
           </Card>
@@ -341,55 +322,40 @@ export default function Portfolio() {
                     {project.title}
                     <div className="flex space-x-2">
                       {project.github && (
-                        <motion.div
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <Button variant="ghost" size="icon" asChild>
-                            <a
-                              href={project.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label={`GitHub repository for ${project.title}`}
-                            >
-                              <Github className="h-5 w-5" />
-                            </a>
-                          </Button>
-                        </motion.div>
+                        <Button variant="ghost" size="icon" asChild>
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`GitHub repository for ${project.title}`}
+                          >
+                            <Github className="h-5 w-5" />
+                          </a>
+                        </Button>
                       )}
                       {project.live && (
-                        <motion.div
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <Button variant="ghost" size="icon" asChild>
-                            <a
-                              href={project.live}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label={`Live demo for ${project.title}`}
-                            >
-                              <ExternalLink className="h-5 w-5" />
-                            </a>
-                          </Button>
-                        </motion.div>
+                        <Button variant="ghost" size="icon" asChild>
+                          <a
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Live demo for ${project.title}`}
+                          >
+                            <ExternalLink className="h-5 w-5" />
+                          </a>
+                        </Button>
                       )}
                       {project.docs && (
-                        <motion.div
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <Button variant="ghost" size="icon" asChild>
-                            <a
-                              href={project.docs}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label={`Documentation for ${project.title}`}
-                            >
-                              <FileText className="h-5 w-5" />
-                            </a>
-                          </Button>
-                        </motion.div>
+                        <Button variant="ghost" size="icon" asChild>
+                          <a
+                            href={project.docs}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Documentation for ${project.title}`}
+                          >
+                            <FileText className="h-5 w-5" />
+                          </a>
+                        </Button>
                       )}
                     </div>
                   </CardTitle>
@@ -461,54 +427,31 @@ export default function Portfolio() {
       <footer className="bg-muted py-6">
         <div className="container mx-auto text-center px-4">
           <div className="flex justify-center space-x-4 mb-4">
-            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <a
-                href={portfolioData.contact.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
-                aria-label="GitHub Profile"
-              >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </a>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <a
-                href={portfolioData.contact.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
-                aria-label="LinkedIn Profile"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <a
-                href={"mailto:" + portfolioData.contact.email}
-                target="_blank"
-                className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
-                aria-label="Email"
-              >
-                <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
-              </a>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <a
-                href={"tel:" + portfolioData.contact.phone}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline "
-                aria-label="Phone"
-              >
-                <Phone className="h-5 w-5" />
-                <span className="sr-only">Phone</span>
-              </a>
-            </motion.div>
+            <SocialLink
+              href={portfolioData.contact.github}
+              icon={Github}
+              label="GitHub Profile"
+            />
+            <SocialLink
+              href={portfolioData.contact.linkedin}
+              icon={Linkedin}
+              label="LinkedIn Profile"
+            />
+            <SocialLink
+              href={`mailto:${portfolioData.contact.email}`}
+              icon={Mail}
+              label="Email"
+            />
+            <SocialLink
+              href={`tel:${portfolioData.contact.phone}`}
+              icon={Phone}
+              label="Phone"
+            />
           </div>
-          <p>&copy; 2024 {portfolioData.name}. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} {portfolioData.name}. All rights
+            reserved.
+          </p>
         </div>
       </footer>
     </div>
