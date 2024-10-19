@@ -13,6 +13,9 @@
       "company": "Globe & Citizen",
       "location": "Canada (Remote)",
       "period": "March 2024 - Present",
+      "github": "https://github.com/globe-and-citizen/cnc-portal",
+      "link": "https://github.com/globe-and-citizen",
+      "docs": "",
       "responsibilities": [
         "Building the CNC Portal, an innovative platform for crypto-native corporations, focusing on micro-contribution recognition and effective governance tools.",
         "Architecting and implementing full-stack solutions using Vue.js, Tailwind, DaisyUI for frontend, and Node.js with Prisma and PostgreSQL for backend, ensuring seamless user experiences and robust data management.",
@@ -25,7 +28,9 @@
       "company": "CTRLDefi",
       "location": "Remote",
       "period": "August 2024 - Present",
-
+      "github": "https://github.com/ctrlsa/smart-contract-wallet-Ethereum-Account-Abstraction-Telegram",
+      "link": "https://github.com/ctrlsa",
+      "docs": "",
       "responsibilities": [
         "Developing the 'Instant Send App', a self-custodial smart-contract wallet, for seamless stablecoin transfers between Telegram contacts within the scope of the Telegram Messenger",
 
@@ -37,6 +42,9 @@
       "company": "bEarly TechnoVations Pvt. Ltd.",
       "location": "Chennai (Hybrid)",
       "period": "April 2023 - January 2024",
+      "github": "",
+      "link": "https://www.bearlytech.com/",
+      "docs": "",
       "responsibilities": [
         "Led the end-to-end development of paceB, a biomedical device for early-stage Parkinson's disease diagnosis, from concept to market-ready solution.",
         "Engineered a high-performance IoT ecosystem using ESP32, AWS, and EMQX broker, achieving a 13-fold improvement in real-time data streaming efficiency with a 250-byte payload.",
@@ -49,6 +57,9 @@
       "company": "Gerontechnology Research Center",
       "location": "Yuan Ze University, Taiwan (On-site)",
       "period": "February 2023 - June 2023",
+      "github": "",
+      "link": "https://www.grc.yzu.edu.tw/",
+      "docs": "",
       "responsibilities": [
         "Collaborated with Dr. Yeh-Liang Hsu to develop innovative products for assessing the physical and cognitive well-being of aging adults.",
         "Engineered a scalable IoT backend using Go's Gin-Gonic framework, MongoDB, and MariaDB, facilitating efficient user and device management.",
@@ -61,6 +72,7 @@
       "company": "Analog Devices India",
       "location": "Bengaluru (Remote)",
       "period": "April 2022 – June 2022",
+      "link": "https://www.analog.com/",
       "responsibilities": [
         "Completed a comprehensive project on 'Source Meter Control Automation & Complex Device Drivers (CDD)', gaining deep insights into Battery Management Systems (BMS), embedded software development, and isoSPI technology.",
         "Contributed to the development of embedded systems, enhancing skills in low-level programming and hardware integration."

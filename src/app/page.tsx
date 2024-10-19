@@ -257,7 +257,47 @@ export default function Portfolio() {
             {portfolioData.experience.map((job, index) => (
               <Card key={index}>
                 <CardHeader>
-                  <CardTitle>{job.title}</CardTitle>
+                  <CardTitle className="flex items-center justify-between">
+                    {job.title}
+                    <div className="flex space-x-2">
+                      {job.github && (
+                        <Button variant="ghost" size="icon" asChild>
+                          <a
+                            href={job.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`GitHub repository for ${job.company}`}
+                          >
+                            <Github className="h-5 w-5" />
+                          </a>
+                        </Button>
+                      )}
+                      {job.link && (
+                        <Button variant="ghost" size="icon" asChild>
+                          <a
+                            href={job.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Website for ${job.company}`}
+                          >
+                            <ExternalLink className="h-5 w-5" />
+                          </a>
+                        </Button>
+                      )}
+                      {job.docs && (
+                        <Button variant="ghost" size="icon" asChild>
+                          <a
+                            href={job.docs}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Documentation for ${job.company}`}
+                          >
+                            <FileText className="h-5 w-5" />
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  </CardTitle>
                   <CardDescription>
                     {job.company}, {job.location} | {job.period}
                   </CardDescription>
