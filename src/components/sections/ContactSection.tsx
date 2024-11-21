@@ -7,14 +7,14 @@ import { Mail, Phone, Github, Linkedin } from "lucide-react";
 const ContactSection = () => {
   return (
     <AnimatedSection id="contact">
-      <h2 className="text-2xl font-semibold mb-4">Let's Work Together</h2>
+      <h2 className="text-2xl font-semibold mb-4">Let&apos;s Work Together</h2>
       <Card>
         <CardContent className="pt-6">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-xl font-medium mb-4">Get in Touch</h3>
               <p className="text-muted-foreground mb-6">
-                I'm always interested in hearing about new projects and
+                I&apos;m always interested in hearing about new projects and
                 opportunities.
               </p>
               <div className="space-y-4">
