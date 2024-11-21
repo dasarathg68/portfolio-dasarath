@@ -172,7 +172,7 @@
       "description": "Patient Management System",
       "details": "A system with PDF uploads via Amazon S3 for managing patient records.",
       "github": "https://github.com/dasarathg68/MedPortal",
-      "live": "",
+      "live": "https://med-portal-ochre.vercel.app/login",
       "docs": ""
     },
     {
@@ -180,12 +180,13 @@
       "description": "Energy monitoring solution using MERN stack and EMQX broker",
       "details": "Developed IoT nodes to monitor energy consumption in real-time.",
       "github": "https://github.com/dasarathg68/energy-monitoring",
-      "live": "",
+      "live": "http://139.59.67.136:3000/",
       "docs": ""
     },
     {
       "title": "IoT Nodes for Quality Monitoring in Water Bodies",
       "description": "Built IoT nodes for tracking water quality parameters.",
+      "details": "Developed a setup for monitoring water quality parameters like pH, temperature, and conductivity using Raspberry Pi, ESP32, and MQTT protocol and also developed a mobile app for monitoring the data in real-time. Also, conducted an investigative research on detection of pollutant levels using cyclic voltammetry. The project formed the basis of my mini-project thesis in my senior year.",
       "github": "",
       "live": "",
       "docs": ""
@@ -193,7 +194,7 @@
     {
       "title": "Temperature Monitoring System",
       "description": "Monitored cold storage temperature using IoT.",
-      "details": "Developed an IoT system to track and control temperatures for cold storage environments.",
+      "details": "Developed an IoT system to track and control temperatures for cold storage environments. This was done whilst working with Swasth, an ABLEST SASTRA incubated startup company funded by the Department of Science and Technology, Government of India (NIDHI Prayas Fund).",
       "github": "",
       "live": "",
       "docs": ""
