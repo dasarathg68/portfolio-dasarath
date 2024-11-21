@@ -128,6 +128,30 @@
   ],
   "projects": [
     {
+      "title": "Instant Send App",
+      "description": "A Telegram MiniApp for Instant USDC Transfers. ",
+      "details": "A Telegram MiniApp for Instant USDC Transfers with seamless contact integration for a decentralized user experience, supported by Solana Foundation ",
+      "github": "https://github.com/ctrlsa/instant-send-app",
+      "live": "https://web.telegram.org/k/#@InstantSendAppBot",
+      "docs": ""
+    },
+    {
+      "title": "Account Abstraction for Telegram MiniApps",
+      "description": "Account Abstraction R&D for Telegram MiniApps",
+      "details": "R&D of possibilities, limitations & solutions to natively integrate self-custodial EVM smart-contract wallet in Telegram messenger. Non-profit public goods project supported by Ethereum Foundation grant supported by Ethereum Foundation grant.",
+      "github": "https://github.com/ctrlsa/smart-contract-wallet-Ethereum-Account-Abstraction-Telegram",
+      "live": "",
+      "docs": ""
+    },
+    {
+      "title": "CNC Portal",
+      "description": "A Portal for On-Chain Company Management and Contract Deployment",
+      "details": "A decentralized platform for managing companies and deploying smart contracts on-chain.",
+      "github": "https://github.com/globe-and-citizen/cnc-portal",
+      "live": "https://cnc-portal.io",
+      "docs": "https://github.com/globe-and-citizen/cnc-portal/wiki"
+    },
+    {
       "title": "GovernanceX",
       "description": "A Portal for On-Chain Team Management and Contract Deployment",
       "details": "A decentralized platform for managing teams and deploying smart contracts on-chain.",
