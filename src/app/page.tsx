@@ -1,32 +1,19 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import Image from "next/image";
+import { useEffect, useRef } from "react";
+import { useScroll, useSpring } from "framer-motion";
 import { useTheme } from "next-themes";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Phone,
-  Award,
-  FileText,
-  ExternalLink,
-  GraduationCap,
-} from "lucide-react";
-import portfolioData from "@/utils/data.json";
-import dasarathg68Image from "@/app/dachu.jpg";
-import Navbar from "@/components/NavBar";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import Navbar from "@/components/layout/NavBar";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/components/sections/HeroSection";
+import AboutSection from "@/components/sections/AboutSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+import EducationSection from "@/components/sections/EducationSection";
+import SkillsSection from "@/components/sections/SkillsSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
+import AchievementsSection from "@/components/sections/AchievementsSection";
+import CertificationsSection from "@/components/sections/CertificationsSection";
+import ContactSection from "@/components/sections/ContactSection";
 
 interface Node {
   x: number;
@@ -128,68 +115,11 @@ const BlockchainNetworkBackground = () => {
     <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none" />
   );
 };
-const AnimatedSection = ({
-  children,
-  id,
-}: {
-  children: React.ReactNode;
-  id: string;
-}) => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.8, 1],
-    [0.8, 1, 1, 0.8]
-  );
-
-  return (
-    <motion.section
-      ref={ref}
-      style={{ opacity, scale }}
-      className="mb-12"
-      id={id}
-    >
-      {children}
-    </motion.section>
-  );
-};
-
-const SocialLink = ({
-  href,
-  icon: Icon,
-  label,
-}: {
-  href: string;
-  icon: React.ElementType;
-  label: string;
-}) => (
-  <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline"
-      aria-label={label}
-    >
-      <Icon className="h-5 w-5" />
-      <span className="sr-only">{label}</span>
-    </a>
-  </motion.div>
-);
-
 export default function Portfolio() {
   const { scrollYProgress } = useScroll();
-  const [mounted, setMounted] = useState(false);
   const { setTheme } = useTheme();
 
   useEffect(() => {
-    setMounted(true);
     setTheme("dark");
   }, [setTheme]);
 
@@ -201,299 +131,22 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
-      {mounted && <BlockchainNetworkBackground />}
+      <BlockchainNetworkBackground />
       <Navbar scaleX={scaleX} />
 
       <main className="container mx-auto py-6 px-4">
-        <AnimatedSection id="about">
-          <h2 className="text-2xl font-semibold mb-4">About Me</h2>
-          <Card>
-            <CardContent className="flex flex-col items-center gap-6 pt-6">
-              <motion.div
-                whileHover={{ scale: 1.1, rotate: 360 }}
-                transition={{ type: "spring", stiffness: 260, damping: 20 }}
-              >
-                <Avatar className="h-24 w-24">
-                  <Image
-                    src={dasarathg68Image}
-                    alt={portfolioData.name}
-                    width={96}
-                    height={96}
-                    className="rounded-full object-cover"
-                  />
-                  <AvatarFallback>JD</AvatarFallback>
-                </Avatar>
-              </motion.div>
-              <p className="text-lg">{portfolioData.about}</p>
-              <div className="flex justify-center space-x-4 mb-4">
-                <SocialLink
-                  href={portfolioData.contact.github}
-                  icon={Github}
-                  label="GitHub Profile"
-                />
-                <SocialLink
-                  href={portfolioData.contact.linkedin}
-                  icon={Linkedin}
-                  label="LinkedIn Profile"
-                />
-                <SocialLink
-                  href={`mailto:${portfolioData.contact.email}`}
-                  icon={Mail}
-                  label="Email"
-                />
-                <SocialLink
-                  href={`tel:${portfolioData.contact.phone}`}
-                  icon={Phone}
-                  label="Phone"
-                />
-              </div>
-            </CardContent>
-          </Card>
-        </AnimatedSection>
-
-        <AnimatedSection id="experience">
-          <h2 className="text-2xl font-semibold mb-4">Experience</h2>
-          <div className="space-y-6">
-            {portfolioData.experience.map((job, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    {job.title}
-                    <div className="flex space-x-2">
-                      {job.github && (
-                        <Button variant="ghost" size="icon" asChild>
-                          <a
-                            href={job.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`GitHub repository for ${job.company}`}
-                          >
-                            <Github className="h-5 w-5" />
-                          </a>
-                        </Button>
-                      )}
-                      {job.link && (
-                        <Button variant="ghost" size="icon" asChild>
-                          <a
-                            href={job.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Website for ${job.company}`}
-                          >
-                            <ExternalLink className="h-5 w-5" />
-                          </a>
-                        </Button>
-                      )}
-                      {job.docs && (
-                        <Button variant="ghost" size="icon" asChild>
-                          <a
-                            href={job.docs}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Documentation for ${job.company}`}
-                          >
-                            <FileText className="h-5 w-5" />
-                          </a>
-                        </Button>
-                      )}
-                    </div>
-                  </CardTitle>
-                  <CardDescription>
-                    {job.company}, {job.location} | {job.period}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="list-disc pl-6">
-                    {job.responsibilities.map((responsibility, idx) => (
-                      <li key={idx}>{responsibility}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection id="education">
-          <h2 className="text-2xl font-semibold mb-4">Education</h2>
-          <div className="space-y-6">
-            {portfolioData.education.map((edu, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle className="flex items-center">
-                    <GraduationCap className="mr-2 h-5 w-5" />
-                    {edu.degree}
-                  </CardTitle>
-                  <CardDescription>
-                    {edu.institution}, {edu.location}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">{edu.period}</p>
-                  <p className="font-medium mt-2">{edu.grade}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection id="skills">
-          <h2 className="text-2xl font-semibold mb-4">Skills</h2>
-          <div className="flex flex-wrap gap-2">
-            {portfolioData.skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Badge>{skill}</Badge>
-              </motion.div>
-            ))}
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection id="projects">
-          <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-          <div className="grid gap-6 md:grid-cols-2">
-            {portfolioData.projects.map((project, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    {project.title}
-                    <div className="flex space-x-2">
-                      {project.github && (
-                        <Button variant="ghost" size="icon" asChild>
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`GitHub repository for ${project.title}`}
-                          >
-                            <Github className="h-5 w-5" />
-                          </a>
-                        </Button>
-                      )}
-                      {project.live && (
-                        <Button variant="ghost" size="icon" asChild>
-                          <a
-                            href={project.live}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Live demo for ${project.title}`}
-                          >
-                            <ExternalLink className="h-5 w-5" />
-                          </a>
-                        </Button>
-                      )}
-                      {project.docs && (
-                        <Button variant="ghost" size="icon" asChild>
-                          <a
-                            href={project.docs}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Documentation for ${project.title}`}
-                          >
-                            <FileText className="h-5 w-5" />
-                          </a>
-                        </Button>
-                      )}
-                    </div>
-                  </CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>{project.details}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection id="achievements">
-          <h2 className="text-2xl font-semibold mb-4">
-            Activities & Achievements
-          </h2>
-          <Card>
-            <CardContent className="pt-6">
-              <ul className="space-y-2">
-                {portfolioData.activities_and_achievements.map(
-                  (achievement, index) => (
-                    <motion.li
-                      key={index}
-                      className="flex items-start"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                    >
-                      <Badge variant="secondary" className="mr-2 mt-1">
-                        •
-                      </Badge>
-                      <span>{achievement}</span>
-                    </motion.li>
-                  )
-                )}
-              </ul>
-            </CardContent>
-          </Card>
-        </AnimatedSection>
-
-        <AnimatedSection id="certifications">
-          <h2 className="text-2xl font-semibold mb-4">Certifications</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {portfolioData.certifications.map((cert, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300, damping: 10 }}
-              >
-                <Card className="overflow-hidden">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-sm">{cert.name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-center text-xs text-muted-foreground mb-2">
-                      <Award className="mr-2 h-4 w-4" />
-                      <span>{cert.issuer}</span>
-                    </div>
-                    <Badge variant="secondary">{cert.date}</Badge>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </AnimatedSection>
+        <HeroSection />
+        <AboutSection />
+        <ExperienceSection />
+        <EducationSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <AchievementsSection />
+        <CertificationsSection />
+        <ContactSection />
       </main>
 
-      <footer className="bg-muted py-6">
-        <div className="container mx-auto text-center px-4">
-          <div className="flex justify-center space-x-4 mb-4">
-            <SocialLink
-              href={portfolioData.contact.github}
-              icon={Github}
-              label="GitHub Profile"
-            />
-            <SocialLink
-              href={portfolioData.contact.linkedin}
-              icon={Linkedin}
-              label="LinkedIn Profile"
-            />
-            <SocialLink
-              href={`mailto:${portfolioData.contact.email}`}
-              icon={Mail}
-              label="Email"
-            />
-            <SocialLink
-              href={`tel:${portfolioData.contact.phone}`}
-              icon={Phone}
-              label="Phone"
-            />
-          </div>
-          <p>
-            &copy; {new Date().getFullYear()} {portfolioData.name}. All rights
-            reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
