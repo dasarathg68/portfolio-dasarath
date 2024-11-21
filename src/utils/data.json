@@ -9,6 +9,20 @@
   },
   "experience": [
     {
+      "title": "Core Contributor",
+      "company": "CTRLDefi",
+      "location": "Remote",
+      "period": "August 2024 - Present",
+      "github": "https://github.com/ctrlsa/smart-contract-wallet-Ethereum-Account-Abstraction-Telegram",
+      "link": "https://github.com/ctrlsa/instant-send-app",
+      "docs": "",
+      "responsibilities": [
+        "CTRLDefi is a non-profit public goods project supported by Ethereum Foundation grant",
+        "Leading the development of the 'Instant Send App', enabling effortless, secure stablecoin transfers through Telegram, with Solana wallets, USDC support, and seamless contact integration for a decentralized user experience",
+        "Also working on researching Account Abstraction solutions compatible with Telegram MiniApps and optimize user experience for crypto newcomers, focusing on simplicity and ease of use"
+      ]
+    },
+    {
       "title": "Web3 Developer",
       "company": "Globe & Citizen",
       "location": "Canada (Remote)",
@@ -24,19 +38,18 @@
       ]
     },
     {
-      "title": "Core Contributor",
-      "company": "CTRLDefi",
+      "title": "Independent Contractor",
+      "company": "Freelance",
       "location": "Remote",
-      "period": "August 2024 - Present",
-      "github": "https://github.com/ctrlsa/smart-contract-wallet-Ethereum-Account-Abstraction-Telegram",
-      "link": "https://github.com/ctrlsa/instant-send-app",
+      "period": "January 2024 - Present",
+      "github": "",
+      "link": "",
       "docs": "",
       "responsibilities": [
-        "CTRLDefi is a non-profit public goods project supported by Ethereum Foundation grant",
-        "Leading the development of the 'Instant Send App', enabling effortless, secure stablecoin transfers through Telegram, with Solana wallets, USDC support, and seamless contact integration for a decentralized user experience",
-        "Also working on researching Account Abstraction solutions compatible with Telegram MiniApps and optimize user experience for crypto newcomers, focusing on simplicity and ease of use"
+        "Completed over 10 projects on Upwork and other platforms, while managing teams around the globe, demonstrating my ability to deliver results in software development, embedded electronics, and robotics."
       ]
     },
+
     {
       "title": "Lead Engineer",
       "company": "bEarly TechnoVations Pvt. Ltd.",
