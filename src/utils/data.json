@@ -17,10 +17,10 @@
       "link": "https://github.com/globe-and-citizen",
       "docs": "",
       "responsibilities": [
-        "Building the CNC Portal, an innovative platform for crypto-native corporations, focusing on micro-contribution recognition and effective governance tools.",
+        "Working on the development of the CNC Portal, an innovative web interface enabling users to deploy, access, and manage smart contracts that define and operate crypto-native corporations.",
         "Architecting and implementing full-stack solutions using Vue.js, Tailwind, DaisyUI for frontend, and Node.js with Prisma and PostgreSQL for backend, ensuring seamless user experiences and robust data management.",
         "Driving quality assurance through comprehensive testing with Vitest and Cypress, while maintaining CI/CD pipelines for streamlined development processes.",
-        "Developing and optimizing smart contracts using Solidity, and managing a parallel decentralized e-voting system project, showcasing versatility in blockchain applications."
+        "The portal focuses on micro-contribution recognition and effective governance tools through smart contracts in Solidity, for decentralized e-voting, banking, token management and Board of Directors (BoD) governance."
       ]
     },
     {
@@ -29,12 +29,12 @@
       "location": "Remote",
       "period": "August 2024 - Present",
       "github": "https://github.com/ctrlsa/smart-contract-wallet-Ethereum-Account-Abstraction-Telegram",
-      "link": "https://github.com/ctrlsa",
+      "link": "https://github.com/ctrlsa/instant-send-app",
       "docs": "",
       "responsibilities": [
-        "Developing the 'Instant Send App', a self-custodial smart-contract wallet, for seamless stablecoin transfers between Telegram contacts within the scope of the Telegram Messenger",
-
-        "Research and apply Account Abstraction solutions compatible with Telegram MiniApps and Optimize user experience for crypto newcomers, focusing on simplicity and ease of use"
+        "CTRLDefi is a non-profit public goods project supported by Ethereum Foundation grant",
+        "Leading the development of the 'Instant Send App', enabling effortless, secure stablecoin transfers through Telegram, with Solana wallets, USDC support, and seamless contact integration for a decentralized user experience",
+        "Also working on researching Account Abstraction solutions compatible with Telegram MiniApps and optimize user experience for crypto newcomers, focusing on simplicity and ease of use"
       ]
     },
     {
