@@ -14,6 +14,7 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 import AchievementsSection from "@/components/sections/AchievementsSection";
 import CertificationsSection from "@/components/sections/CertificationsSection";
 import ContactSection from "@/components/sections/ContactSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import { BlockchainNetworkBackground } from "@/components/BlockchainNetworkBackground";
 
 export default function Portfolio() {
@@ -37,6 +38,7 @@ export default function Portfolio() {
 
       <main className="container mx-auto py-6 px-4">
         <HeroSection />
+        <TestimonialsSection />
         <AboutSection />
         <ExperienceSection />
         <EducationSection />

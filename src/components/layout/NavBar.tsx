@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu, X, ChevronRight } from "lucide-react";
 
 const navItems = [
+  { name: "Testimonials", href: "#testimonials" },
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Education", href: "#education" },
