@@ -1,5 +1,5 @@
 import { SocialLink } from "../shared/SocialLink";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Twitter } from "lucide-react";
 import portfolioData from "@/utils/data.json";
 
 const Footer = () => {
@@ -26,6 +26,11 @@ const Footer = () => {
             href={`tel:${portfolioData.contact.phone}`}
             icon={Phone}
             label="Phone"
+          />
+          <SocialLink
+            href={portfolioData.contact.x}
+            icon={Twitter}
+            label="X/Twitter"
           />
         </div>
         <p className="text-sm text-muted-foreground">

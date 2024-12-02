@@ -7,6 +7,7 @@ export interface Experience {
   github?: string;
   link?: string;
   docs?: string;
+  x?: string;
 }
 
 export interface Education {

@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "../shared/AnimatedSection";
 import portfolioData from "@/utils/data.json";
-import { Mail, Phone, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, Twitter } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -58,6 +58,15 @@ const ContactSection = () => {
                       rel="noopener noreferrer"
                     >
                       <Linkedin className="h-4 w-4 mr-2" /> LinkedIn
+                    </a>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <a
+                      href={portfolioData.contact.x}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Twitter className="h-4 w-4 mr-2" /> X/Twitter
                     </a>
                   </Button>
                 </div>
