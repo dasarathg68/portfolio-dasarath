@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "../shared/AnimatedSection";
 import portfolioData from "@/utils/data.json";
-import { Mail, Phone, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -27,7 +27,7 @@ const ContactSection = () => {
                     {portfolioData.contact.email}
                   </a>
                 </div>
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <Phone className="h-5 w-5 mr-3" />
                   <a
                     href={`tel:${portfolioData.contact.phone}`}
@@ -35,7 +35,7 @@ const ContactSection = () => {
                   >
                     {portfolioData.contact.phone}
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="space-y-4">

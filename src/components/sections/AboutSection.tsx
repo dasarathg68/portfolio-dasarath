@@ -6,7 +6,7 @@ import portfolioData from "@/utils/data.json";
 import Image from "next/image";
 import dasarathg68Image from "@/app/dachu.jpg";
 import { SocialLink } from "../shared/SocialLink";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -46,11 +46,11 @@ const AboutSection = () => {
               icon={Mail}
               label="Email"
             />
-            <SocialLink
+            {/* <SocialLink
               href={`tel:${portfolioData.contact.phone}`}
               icon={Phone}
               label="Phone"
-            />
+            /> */}
           </div>
         </CardContent>
       </Card>
