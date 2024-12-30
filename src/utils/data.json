@@ -272,6 +272,13 @@
   "testimonials": [
     {
       "id": 1,
+      "name": "Dmitry Sokolov",
+      "role": "Project Lead",
+      "company": "CTRLDefi, Armenia",
+      "content": "I recommend Dasarath for both his professional skills and general/personal qualities. We have worked closely on a daily basis for over four months in the CTRL team. Dasarath is responsible, reliable, able to estimate deadlines for tasks, and builds quickly and in time, delivering well in advance of deadlines in ~50% of cases. He is diligent, hard-working, proactive, easy-going, vigorous, and responsive in communication. He adapts and learns quickly, is humble, not greedy or selfish, and regularly exceeds expectations. I have still not found any serious minuses about Dasarath during our cooperation. I enjoy working with him and would like to build a long-term relationship both in work and as friends."
+    },
+    {
+      "id": 1,
       "name": "Dr. Yeh-Liang Hsu",
       "role": "CEO",
       "company": "SedaGTech Private Limited, Taiwan",
