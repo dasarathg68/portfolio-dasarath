@@ -4,9 +4,9 @@ import portfolioData from "@/utils/data.json";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted py-6">
+    <footer className="bg-muted py-4 sm:py-6">
       <div className="container mx-auto text-center px-4">
-        <div className="flex justify-center space-x-4 mb-4">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-4">
           <SocialLink
             href={portfolioData.contact.github}
             icon={Github}
@@ -33,7 +33,7 @@ const Footer = () => {
             label="X/Twitter"
           />
         </div>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-xs sm:text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} {portfolioData.name}. All rights
           reserved.
         </p>
