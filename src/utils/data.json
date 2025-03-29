@@ -39,6 +39,19 @@
       ]
     },
     {
+      "title": "Web3 Developer",
+      "company": "Uniswap Hook Incubator, Atrium Academy",
+      "location": "Remote",
+      "period": "January 2025 - March 2025",
+      "github": "https://github.com/dasarathg68/PerpDex",
+      "link": "https://atrium.academy/uniswap",
+      "docs": "",
+      "responsibilities": [
+        "Part of the fourth cohort of the Uniswap Hook Incubator, a 12-week program for early-stage Web3 developers to build and launch their own Hooks on Uniswap V4.",
+        "Developed a perpetual trading hook on Uniswap V4, enabling dynamic leverage, real-time liquidation, and seamless liquidity integration solving for capital efficiency, composability, and on-chain risk management in a single, modular design"
+      ]
+    },
+    {
       "title": "Independent Contractor",
       "company": "Freelance",
       "location": "Remote",
@@ -278,13 +291,6 @@
       "content": "I recommend Dasarath for both his professional skills and general/personal qualities. We have worked closely on a daily basis for over four months in the CTRL team. Dasarath is responsible, reliable, able to estimate deadlines for tasks, and builds quickly and in time, delivering well in advance of deadlines in ~50% of cases. He is diligent, hard-working, proactive, easy-going, vigorous, and responsive in communication. He adapts and learns quickly, is humble, not greedy or selfish, and regularly exceeds expectations. I have still not found any serious minuses about Dasarath during our cooperation. I enjoy working with him and would like to build a long-term relationship both in work and as friends."
     },
     {
-      "id": 1,
-      "name": "Dr. Yeh-Liang Hsu",
-      "role": "CEO",
-      "company": "SedaGTech Private Limited, Taiwan",
-      "content": "Dasarath is a well-educated young man who is gentle and polite. He quickly adapted to the environment and got along well with the team. Furthermore, his professional skills are commendable. Even when faced with unfamiliar problems, he demonstrated a willingness to take on challenges and exhibited a quick learning ability. We assigned Dasarath to several real projects, and he made significant contributions that greatly benefited our team."
-    },
-    {
       "id": 2,
       "name": "Dr. Ravi Seyed-Mahmoud",
       "role": "Chief Policy Officer",
@@ -293,13 +299,21 @@
     },
     {
       "id": 3,
+      "name": "Dr. Yeh-Liang Hsu",
+      "role": "CEO",
+      "company": "SedaGTech Private Limited, Taiwan",
+      "content": "Dasarath is a well-educated young man who is gentle and polite. He quickly adapted to the environment and got along well with the team. Furthermore, his professional skills are commendable. Even when faced with unfamiliar problems, he demonstrated a willingness to take on challenges and exhibited a quick learning ability. We assigned Dasarath to several real projects, and he made significant contributions that greatly benefited our team."
+    },
+
+    {
+      "id": 4,
       "name": "Ivo Brett",
       "role": "Software Engineer",
       "company": "Mattercoder.com",
       "content": "Very good communicator and really took the time to understand the brief. The work completed was of high quality. I learned a lot from this consultant. I would definitely hire again!"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "",
       "role": "Founder",
       "company": "ClickControlTech Private Ltd",
