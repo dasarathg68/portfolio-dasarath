@@ -47,7 +47,7 @@
       "link": "https://atrium.academy/uniswap",
       "docs": "",
       "responsibilities": [
-        "Part of the fourth cohort of the Uniswap Hook Incubator, a 12-week program for early-stage Web3 developers to build and launch their own Hooks on Uniswap V4.",
+        "Part of the fourth cohort of the Uniswap Hook Incubator, a 12-week program forfeat Web3 developers to build and launch their own Hooks on Uniswap V4.",
         "Developed a perpetual trading hook on Uniswap V4, enabling dynamic leverage, real-time liquidation, and seamless liquidity integration solving for capital efficiency, composability, and on-chain risk management in a single, modular design"
       ]
     },
