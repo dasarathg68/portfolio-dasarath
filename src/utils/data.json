@@ -10,6 +10,20 @@
   },
   "experience": [
     {
+      "title": "Software Developer",
+      "company": "SQS Trading",
+      "location": "New York, United States (Remote)",
+      "period": "April 2025 - Present",
+      "github": "",
+      "link": "https://www.sqs.cx/",
+      "docs": "",
+      "responsibilities": [
+        "Leading crypto market maker delivering institutional-grade liquidity across global digital asset markets.",
+        "Developing latency testing suites for different exchanges and benchmarking exchange performance."
+      ]
+    },
+
+    {
       "title": "Core Contributor",
       "company": "CTRLDefi",
       "location": "Remote",
