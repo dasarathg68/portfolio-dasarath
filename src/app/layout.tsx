@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
+import { LenisProvider } from "@/components/LenisProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,6 +24,16 @@ export const metadata: Metadata = {
     "Portfolio of Dasarath G, a software engineer based in Chennai, India.",
 };
 
+function RootLayoutClient({ children }: { children: React.ReactNode }) {
+  return (
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <Analytics />
+      <SpeedInsights />
+      {children}
+    </ThemeProvider>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,11 +44,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Analytics />
-          <SpeedInsights />
-          {children}
-        </ThemeProvider>{" "}
+        <LenisProvider>
+          <RootLayoutClient>{children}</RootLayoutClient>
+        </LenisProvider>
       </body>
     </html>
   );
