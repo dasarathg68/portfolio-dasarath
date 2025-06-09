@@ -29,7 +29,7 @@ const HeroSection = () => (
         transition={{ duration: 0.8, delay: 0.4 }}
       >
         <Button variant="outline" size="lg" className="text-base" asChild>
-          <a href="#work">View my work →</a>
+          <a href="#experience">View my work →</a>
         </Button>
       </motion.div>
     </div>
