@@ -1,41 +1,39 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { AnimatedSection } from "../shared/AnimatedSection";
 
 const HeroSection = () => (
-  <AnimatedSection id="hero">
-    <div className="min-h-[80vh] flex flex-col justify-center items-center text-center">
-      <motion.h1
-        className="text-4xl md:text-6xl font-bold mb-6"
+  <section id="hero" className="min-h-[90vh] flex items-center">
+    <div className="space-y-8">
+      <motion.p
+        className="text-lg font-light tracking-wider text-muted-foreground"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Building Digital Solutions
-      </motion.h1>
-      <motion.p
-        className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl"
+        Hi, I&apos;m Dasarath
+      </motion.p>
+
+      <motion.h1
+        className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-3xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        Full Stack Developer specializing in Web3, IoT, and Embedded Systems
-      </motion.p>
+        Engineer bridging Web3, hardware, governance, and DeSci{" "}
+      </motion.h1>
+
       <motion.div
-        className="flex gap-4"
+        className="pt-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        <Button asChild size="lg">
-          <a href="#projects">View Projects</a>
-        </Button>
-        <Button variant="outline" size="lg" asChild>
-          <a href="#contact">Get in Touch</a>
+        <Button variant="outline" size="lg" className="text-base" asChild>
+          <a href="#work">View my work →</a>
         </Button>
       </motion.div>
     </div>
-  </AnimatedSection>
+  </section>
 );
 
 export default HeroSection;
